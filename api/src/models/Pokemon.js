@@ -1,49 +1,40 @@
 const { DataTypes } = require('sequelize');
-// Exportamos una funcion que define el modelo
-// Luego le injectamos la conexion a sequelize.
+
+// Creamos la tabla pokemon
 module.exports = (sequelize) => {
   // Tabla de Pokemon
   sequelize.define('pokemon', {
-      nombre: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      vida: {
-        type: DataTypes.INTEGER
-      },
-      fuerza: {
-        type: DataTypes.INTEGER
-      },
-      defensa: {
-        type: DataTypes.INTEGER 
-      },
-      Velocidad: {
-        type: DataTypes.INTEGER
-      },
-      Altura: {
-        type: DataTypes.INTEGER
-      },
-      Peso: {
-        type: DataTypes.INTEGER
-      }
+    id: {
+      // Se convierte en el UUID tipo de datos para PostgreSQL y SQLite
+      // https://sequelize.org/master/manual/model-basics.html#uuids
+      type: DataTypes.UUID,
+      primaryKey: true,
+      allowNull: true
+    },
+    nombre: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    vida: {
+      type: DataTypes.INTEGER
+    },
+    fuerza: {
+      type: DataTypes.INTEGER
+    },
+    defensa: {
+      type: DataTypes.INTEGER 
+    },
+    Velocidad: {
+      type: DataTypes.INTEGER
+    },
+    Altura: {
+      type: DataTypes.INTEGER
+    },
+    Peso: {
+      type: DataTypes.INTEGER
+    }
   }, {
     timestamps: false
   });
-
-  // Tabla de Pokemon_Type
-  sequelize.define('pokemon_types', {
-      nombre: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-
-  }, {
-    timestamps: false
-  });
-
-
-
-
-/* --------------------------------- */
 };
 
