@@ -9,7 +9,7 @@ module.exports = (sequelize) => {
       // https://sequelize.org/master/manual/model-basics.html#uuids
       type: DataTypes.UUID,
       primaryKey: true,
-      allowNull: true
+      allowNull: false
     },
     nombre: {
       type: DataTypes.STRING,

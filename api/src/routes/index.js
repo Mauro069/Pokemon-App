@@ -1,9 +1,9 @@
 const { Router } = require('express');
-const getpokemons =  require('./getPokemons') 
+const getAllpokemons =  require('./pokemon') 
 
 const router = Router();
 
 // Middlewares
-router.use('/pokemons', getpokemons)
+router.use('/pokemons', getAllpokemons)
 
 module.exports = router
