@@ -3,4 +3,4 @@ const POKEMON_ID = 'https://pokeapi.co/api/v2/pokemon/';
 const POKEMON_NAME = 'https://pokeapi.co/api/v2/pokemon/';
 const POKEMON_TYPE = 'https://pokeapi.co/api/v2/type';
 
-module.exports = {	POKEMON_URL, POKEMON_ID, POKEMON_NAME, POKEMON_TYPE };
+module.exports = { POKEMON_URL, POKEMON_ID, POKEMON_NAME, POKEMON_TYPE };
