@@ -1,10 +1,9 @@
-const { Router } = require('express');
-const types =  require('./type') 
+const { Router } = require("express");
+const PokemonRouter = require("./pokemon");
 
 const router = Router();
 
 // Middlewares
-router.use('/pokemons',)
-// router.use('/types', types)
+router.use("/pokemons", PokemonRouter);
 
-module.exports = router
+module.exports = router;

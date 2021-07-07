@@ -1,7 +1,7 @@
-const server = require('./src/app.js');
-const { conn } = require('./src/db.js');
+const server = require("./src/app.js");
+const { conn } = require("./src/db.js");
 
-const PORT =  3001
+const PORT = 3001;
 
 // Arranco el servidor
 conn.sync({ force: true }).then(() => {
