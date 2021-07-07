@@ -5,11 +5,15 @@ module.exports = (sequelize) => {
 // Tabla de Type
   sequelize.define('type', {
     id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true
+			type: DataTypes.INTEGER,
+			primaryKey: true,
+			allowNull: false,
+			autoIncrement: true
     },
     nombre: {
-      type: DataTypes.STRING,
+			type: DataTypes.STRING,
+			allowNull: false,
+			unique: true
     },
   }, {
     timestamps: false
