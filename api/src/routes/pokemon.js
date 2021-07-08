@@ -42,9 +42,11 @@ router.get("/:id", async (req, res) => {
 
 //  POST /pokemons
 router.post("/", async (req, res) => {
+  /* Saco del body toda la info que necesito */
   const { nombre, vida, fuerza, defensa, velocidad, altura, peso, type, img } =
     req.body;
   try {
+    /* Si hay info en el body creo un pokemon */
     const createPokemon = await Pokemon.create({
       id: uuidv4(),
       nombre,
@@ -58,6 +60,7 @@ router.post("/", async (req, res) => {
     });
     await createPokemon.setTypes(type);
     return res.status(200).send(createPokemon);
+    /* Sino mando un error */
   } catch (error) {
     console.log(error);
   }
