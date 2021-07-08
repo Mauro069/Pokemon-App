@@ -1,9 +1,9 @@
 const { Pokemon, Type } = require("../db");
 
- // VER ESTO
- 
 const getAllDb = async () => {
+  /* Busco a todos los pokemons */
   return await Pokemon.findAll({
+    /* Que incluyan la tabla type */
     include: {
       model: Type,
       attributes: ["nombre"],

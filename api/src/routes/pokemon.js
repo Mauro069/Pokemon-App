@@ -5,7 +5,7 @@ const { v4: uuidv4 } = require("uuid");
 
 const router = Router();
 
-// GET /pokemons y  GET /pokemons?name="...":
+// GET /pokemons y  GET /pokemons?name=
 router.get("/", async (req, res) => {
   /* Me fijo si pasan un nombre por query */
   const { name } = req.query;
@@ -15,11 +15,11 @@ router.get("/", async (req, res) => {
   if (name) {
     /* Busco el detalle del pokemon con ese nombre */
     let pokeName = await getPokemonDetail("GET_NAME", name);
-    pokeName.length
+    pokeName.length > 0
       ? /* Si se encontro un pokemon con ese nombre, envio el detalle */
         res.status(200).send(pokeName)
       : /* Sino mando un error */
-        res.status(404).send("Pokemon not found");
+        res.status(404).send("Pokemon no encontrado");
   }
   return res.status(200).send(pokeTotal);
 });
@@ -37,6 +37,29 @@ router.get("/:id", async (req, res) => {
         res.status(200).send(pokemonId)
       : /* Sino mando un error */
         res.status(404).send("No hay ningun pokemon con esa id");
+  }
+});
+
+//  POST /pokemons
+router.post("/", async (req, res) => {
+  const { nombre, vida, fuerza, defensa, velocidad, altura, peso, type, img } =
+    req.body;
+  try {
+    const createPokemon = await Pokemon.create({
+      id: uuidv4(),
+      nombre,
+      vida,
+      fuerza,
+      defensa,
+      velocidad,
+      altura,
+      peso,
+      img,
+    });
+    await createPokemon.setTypes(type);
+    return res.status(200).send(createPokemon);
+  } catch (error) {
+    console.log(error);
   }
 });
 
