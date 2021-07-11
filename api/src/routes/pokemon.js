@@ -62,7 +62,7 @@ router.post("/", async (req, res) => {
     return res.status(200).send(createPokemon);
     /* Sino mando un error */
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 });
 
