@@ -1,9 +1,12 @@
 * {
   font-family: system-ui;
+  color: rgb(19, 18, 18);
 }
 
 .navv {
-  background-color: rgb(255, 40, 40);
+  background: #f12711;
+  background: -webkit-linear-gradient(to right, #f12711, #f5af19);
+  background: linear-gradient(to right, #f12711, #f5af19);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,16 +42,15 @@ a {
   text-decoration: none;
   margin-left: 15px;
   color: black;
-  height: auto;
 }
 
 .aboutme:hover {
-  background-color: rgb(255, 95, 95);
+  background-color: #ff5328;
   border-radius: 3px;
 }
 
 .crear:hover {
-  background-color: rgb(255, 95, 95);
+  background-color: #ff5328;
   border-radius: 3px;
 }
 

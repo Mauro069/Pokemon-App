@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import estilos from "./landingPage.css";
+import "./landingPage.css";
 
 const LandingPage = () => {
   return (
@@ -17,7 +17,7 @@ const LandingPage = () => {
       </div>
       <footer>
         <Link to="/aboutme">
-          <button className="aboutMe"> About Me </button>
+          <button className="aboutMe"> Sobre Mi </button>
         </Link>
       </footer>
     </main>
