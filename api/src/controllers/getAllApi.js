@@ -5,10 +5,12 @@ const getApi = async () => {
   let pokemonUrl = await axios.get("https://pokeapi.co/api/v2/pokemon");
   /* Pido los 20 pokemons que siguen */
   let pokemonUrlNext = await axios.get(pokemonUrl.data.next);
+  let pokemonUrlNextNext = await axios.get(pokemonUrlNext.data.next);
   /* Concateno los primeros 20 pokemons con los 20 que siguen */
-  let resultPokemon = pokemonUrl.data.results.concat(
+  let resultPokemons = pokemonUrl.data.results.concat(
     pokemonUrlNext.data.results
   );
+  let resultPokemon = resultPokemons.concat(pokemonUrlNextNext.data.results);
 
   /* Accedo a las propiedades de cada pokemon */
   for (let el of resultPokemon) {
@@ -17,7 +19,7 @@ const getApi = async () => {
     pokemonInfo = pokemonInfo.data;
     el.id = pokemonInfo.id;
     el.vida = pokemonInfo.stats[0].base_stat;
-    el.fuerza = pokemonInfo.stats[1].base_stat;
+    el.ataque = pokemonInfo.stats[1].base_stat;
     el.defensa = pokemonInfo.stats[2].base_stat;
     el.velocidad = pokemonInfo.stats[5].base_stat;
     el.altura = pokemonInfo.height;

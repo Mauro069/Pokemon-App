@@ -1,0 +1,12 @@
+.searchBar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    background-color: rgb(230, 230, 230);
+}
+
+.form {
+    display: flex;
+
+}

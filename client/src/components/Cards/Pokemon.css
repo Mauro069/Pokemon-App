@@ -1,0 +1,77 @@
+* {
+    font-family: system-ui;
+    color: rgb(27, 1, 1);
+}
+
+/* CARD */
+.poke-card {
+  background: rgb(255, 27, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 27, 0, 1) 0%,
+    rgba(255, 100, 0, 1) 100%
+  );
+  width: 375px;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+
+}
+
+/* IMAGEN */
+.poke-img-conteiner {
+  display: flex;
+  margin-right: 20px;
+  background-color: #ff711e;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.poke-img {
+  width: 95px;
+  height: 100px;
+}
+
+.poke-img-conteiner:hover {
+    background-color: #ff8f4f;
+}
+
+/* NOMBRE */
+.poke-name-conteiner {
+    margin-left: 25px;
+    height: 175px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+}
+.poke-name {
+    display: flex;
+    justify-content: flex-start;
+    text-transform: uppercase;
+}
+
+/* TYPES */
+.types {
+    font-size: 15px;
+    font-weight: bold;
+}
+.poke-types-conteiner {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.poke-types {
+    font-size: 15px;
+}
+.poke-types::first-letter {
+    text-transform: uppercase;
+  }

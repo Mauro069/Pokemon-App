@@ -1,18 +1,24 @@
 import { Link } from "react-router-dom";
-import "./nav.css";
+import "./Nav.css";
 
 const Nav = () => {
   return (
     <nav className="navv">
-    <Link  to="/home"> 
-        <h3 className='title'> Pokémon App </h3>
-    </Link>
-    <div className ='linksconteiner'>
-        <div className='links'>
-            <Link className='crear' to="/createpokemon"> Crear Pokemon </Link>
-            <Link className='aboutme' to="/aboutme"> Sobre Mi </Link>
+      <Link to="/">
+        <h3 className="title"> Pokémon App </h3>
+      </Link>
+      <div className="linksconteiner">
+        <div className="links">
+          <Link className="crear" to="/createpokemon">
+            {" "}
+            Create Pokémon{" "}
+          </Link>
+          <Link className="aboutme" to="/aboutme">
+            {" "}
+            About Me{" "}
+          </Link>
         </div>
-    </div>
+      </div>
     </nav>
   );
 };

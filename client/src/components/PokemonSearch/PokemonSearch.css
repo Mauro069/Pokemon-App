@@ -1,0 +1,220 @@
+/* CONTENEDOR */
+.poke-search-conteiner {
+  background-color: #cfcfcf;
+  height: 535px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SEGUNDO NAV */
+.poke-found {
+  display: flex;
+}
+.name-found {
+  margin-left: 10px;
+}
+.name-found::first-letter {
+  text-transform: uppercase;
+}
+.btn {
+  background-color: #ff5c00;
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+/* IMG */
+.poke-search-img-conteiner {
+  background-color: rgb(255, 113, 30);
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 100px;
+}
+.poke-search-img-conteiner:hover {
+  background-color: #ff8f4f;
+}
+.poke-search-img {
+  width: 280px;
+  height: 280px;
+}
+
+/* CONTENEDOR DEL POKEMON */
+.poke-search-info-conteiner {
+  display: flex;
+  flex-direction: row;
+  background: rgb(255, 27, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 27, 0, 1) 0%,
+    rgba(255, 100, 0, 1) 100%
+  );
+  width: 1100px;
+  height: 450px;
+  align-items: center;
+  border-radius: 100px;
+  justify-content: space-between;
+}
+
+/* IZQ */
+.data-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  height: 350px;
+  justify-content: space-around;
+}
+
+/* NAME e Id */
+.poke-search-name {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 40px;
+}
+.poke-name-id {
+  display: flex;
+  align-items: center;
+}
+.poke-search-id {
+  color: #cfcfcf;
+  font-size: 35px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+/* TYPES */
+.typess {
+  font-size: 23px;
+  font-weight: bold;
+}
+.types_search {
+  margin-top: 5px;
+  display: flex;
+  font-size: 23px;
+  justify-content: space-between;
+  margin-right: 350px;
+}
+.types_search-name::first-letter {
+  text-transform: uppercase;
+}
+
+/* Height Y Defense */
+.Height-Defense {
+  display: flex;
+  width: 500px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.Height {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.Height-conteiner {
+  display: flex;
+  font-size: 23px;
+}
+.Defense {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.Defense-conteiner {
+  font-size: 23px;
+  display: flex;
+  margin-right: 100px;
+}
+
+/* Weight Y Speed */
+.Weight-Speed {
+  display: flex;
+  width: 500px;
+  align-items: center;
+  justify-content: space-between;
+}
+.Weight {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.Weight-conteiner {
+  display: flex;
+  font-size: 23px;
+}
+.Speed {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.Speed-conteiner {
+  display: flex;
+  font-size: 23px;
+  margin-right: 123px;
+}
+
+/* HP Y Attack */
+.hp-Attack {
+  display: flex;
+  width: 500px;
+  align-items: center;
+  justify-content: space-between;
+}
+.hp {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.hp-conteiner {
+  display: flex;
+  font-size: 23px;
+}
+.Attack {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.Attack-conteiner {
+  display: flex;
+  font-size: 23px;
+  margin-right: 120px;
+}
+
+.conteiner{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100px;
+  width: 150px;
+  justify-content: space-around;
+}
+
+.conteiner-2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100px;
+  width: 150px;
+  justify-content: space-around;
+  margin-right: 100px;
+}
+

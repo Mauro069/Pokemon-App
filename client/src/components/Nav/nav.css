@@ -1,63 +1,65 @@
 * {
-  font-family: system-ui;
-  color: rgb(19, 18, 18);
-}
+    font-family: system-ui;
+    color: rgb(19, 18, 18);
+  }
+  
+  .navv {
+    background: rgba(255, 100, 0) ;
+    
 
-.navv {
-  background: #f12711;
-  background: -webkit-linear-gradient(to right, #f12711, #f5af19);
-  background: linear-gradient(to right, #f12711, #f5af19);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 40px;
-}
-
-.links {
-  display: flex;
-  margin-right: 35px;
-}
-
-.title {
-  font-size: 23px;
-  color: rgb(0, 0, 0);
-  display: flex;
-  width: 150px;
-  height: 40px;
-  white-space: nowrap;
-  align-items: center;
-  margin-left: 35px;
-  text-decoration: none;
-}
-a {
-  text-decoration: none;
-}
-
-.crear {
-  text-decoration: none;
-  color: black;
-}
-
-.aboutme {
-  text-decoration: none;
-  margin-left: 15px;
-  color: black;
-}
-
-.aboutme:hover {
-  background-color: #ff5328;
-  border-radius: 3px;
-}
-
-.crear:hover {
-  background-color: #ff5328;
-  border-radius: 3px;
-}
-
-.linksconteiner {
-  text-decoration: none;
-  display: flex;
-  width: 250px;
-  justify-content: center;
-  color: black;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+  }
+  
+  .links {
+    display: flex;
+    margin-right: 35px;
+  }
+  
+  .title {
+    font-size: 23px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    width: 150px;
+    height: 40px;
+    white-space: nowrap;
+    align-items: center;
+    margin-left: 35px;
+    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  .crear {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .aboutme {
+    text-decoration: none;
+    margin-left: 15px;
+    color: black;
+  }
+  
+  .aboutme:hover {
+    background-color: #FF1C00;
+    border-radius: 3px;
+    color:#fff;
+  }
+  
+  .crear:hover {
+    background-color: #FF1C00;
+    border-radius: 3px;
+    color:#fff;
+  }
+  
+  .linksconteiner {
+    text-decoration: none;
+    display: flex;
+    width: 250px;
+    justify-content: center;
+    color: black;
+  }

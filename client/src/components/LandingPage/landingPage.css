@@ -1,54 +1,73 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui;
+  margin: 0px;
+  padding: 0px;
 }
-
-.mainn {
-  background-image: url("pokefoto.jpg");
-  background-repeat: no-repeat;
+/* HEADER */
+.header {
+  background-color: #e6e6e6;
+  height: 40px;
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  justify-content: space-between;
+}
+.derecha {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  height: 625px;
+  justify-content: space-evenly;
+  width: 300px;
+}
+.izq {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 20px;
 }
 
+/* FONDO */
 .contenedor {
-  background-color: #fff;
-  display: inline-flex;
-  width: 600px;
-  height: 200px;
-  border-radius: 10px;
-  margin: 200px;
+  background-image: url("Fondo.jpg");
+  background-repeat: no-repeat;
+  height: 585px;
+  display: flex;
   align-items: center;
-  justify-content: space-around;
-  box-shadow: 0px 0px 10px rgb(37, 37, 37);
+  justify-content: center;
 }
 
-.aboutMe {
-  border-radius: 10px;
-  border: none;
-  background-color: #f5583f;
-  font-size: 15px;
-  width: 100px;
-  height: 25px;
-  margin-bottom: 15px;
-  overflow: auto;
+/* MEDIO */
+.centro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 585px;
+  width: 550px;
+  background: rgb(255, 27, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 27, 0, 1) 0%,
+    rgba(255, 100, 0, 1) 100%
+  );
+  flex-direction: column;
 }
-
-.aboutMe:hover {
-  background-color: rgb(252, 47, 47);
+.contenedor-boton {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .home {
   border: none;
-  height: 65px;
-  width: 65px;
-  background-color: rgb(189, 189, 189);
+  text-decoration: none;
+  width: 100px;
+  height: 25px;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
-
 .home:hover {
-  background-color: #c9c9c9;
+  background-color: #1b0101;
+  color: #e6e6e6;
 }

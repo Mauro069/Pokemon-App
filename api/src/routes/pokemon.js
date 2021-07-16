@@ -51,7 +51,7 @@ router.post("/", async (req, res) => {
       id: uuidv4(),
       nombre,
       vida,
-      fuerza,
+      ataque,
       defensa,
       velocidad,
       altura,

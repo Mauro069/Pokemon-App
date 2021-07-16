@@ -1,37 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { render } from 'react-dom';
 import { Route } from "react-router-dom";
-import LandingPage from "./components/LandingPage/landingPage";
-import Nav from "./components/Nav/nav";
-import Searcher from "./components/Searcher/searcher";
-import Pokedex from "./components/Pokedex/pokedex";
-import { getPokemons } from "./Controllers";
+import LandingPage from "./components/LandingPage/LandingPage";
+import AddPokemon from "./components/AddPokemon/AddPokemon";
+import GetTypes from "./components/Types/Types";
+import Home from "./components/Home/Home";
+import PokemonsHome from "./components/Home/PokemonsHome";
+import PokemonSearch from "./components/PokemonSearch/PokemonSearch";
 
 function App() {
-  const [pokemons, setPokemons] = useState([]);
-
-  const axiosPokemons = async () => {
-    try {
-      const data = await getPokemons();
-      setPokemons(data);
-    } catch (error) {}
-  };
-
-  useEffect(() => {
-    axiosPokemons();
-  }, []);
-
   return (
-    <React.Fragment>
-      <Route exact path="/" component={LandingPage}></Route>
-      <Route exact path="/home" component={Nav}></Route>
-      <Route exact path="/home" component={Searcher}></Route>
-
-      <Route
-        path="/home"
-        render={() => <Pokedex pokemons={pokemons} />}
-      />
-    </React.Fragment>
+    <div className="App">
+      <Route exact path="/" component={LandingPage} />
+      <Route path="/" component={GetTypes} />
+      <Route path="/" component={PokemonsHome} />
+      <Route exact path="/home" component={Home} />
+      <Route exact path="/home/:name" component={PokemonSearch} />
+      <Route exact path="/createpokemon" component={AddPokemon} />
+    </div>
   );
 }
 
