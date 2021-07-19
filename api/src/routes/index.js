@@ -4,7 +4,7 @@ const TypesRouter = require("./type");
 
 const router = Router();
 
-// Middlewares
+/* Middlewares */
 router.use("/pokemons", PokemonRouter);
 router.use("/types", TypesRouter);
 

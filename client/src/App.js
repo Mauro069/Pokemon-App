@@ -1,11 +1,12 @@
 import { Route } from "react-router-dom";
 import LandingPage from "./components/LandingPage/LandingPage";
-import AddPokemon from "./components/AddPokemon/AddPokemon";
+import AddPokemon from "./components/CreatePokemon/AddPokemon.jsx";
 import GetTypes from "./components/Types/Types";
 import Home from "./components/Home/Home";
 import PokemonsHome from "./components/Home/PokemonsHome";
 import PokemonSearch from "./components/PokemonSearch/PokemonSearch";
 
+/* Rutas con sus componentes */
 function App() {
   return (
     <div className="App">

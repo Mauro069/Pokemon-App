@@ -8,6 +8,7 @@ import PokemonHome from "./PokemonsHome";
 
 import "./Home.css";
 
+/* Componente Home */
 const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const pokemonPerPage = 12;
@@ -18,15 +19,16 @@ const Home = () => {
   const orderedBy = useSelector((state) => state.ordered_by);
 
   const [allPokemons, setAllPokemons] = useState([]);
-
+  
   const indexOfLastPokemon = currentPage * pokemonPerPage;
   const indexOfFirstPokemon = indexOfLastPokemon - pokemonPerPage;
   const currentPokemon = allPokemons.slice(
     indexOfFirstPokemon,
     indexOfLastPokemon
   );
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  
   useEffect(() => {
     if (filteredBy === "All" && orderedBy === "All") {
       setAllPokemons(pokemons?.slice());

@@ -13,10 +13,6 @@ const Nav = () => {
             {" "}
             Create Pokémon{" "}
           </Link>
-          <Link className="aboutme" to="/aboutme">
-            {" "}
-            About Me{" "}
-          </Link>
         </div>
       </div>
     </nav>

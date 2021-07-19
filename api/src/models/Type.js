@@ -1,8 +1,7 @@
 const { DataTypes } = require("sequelize");
 
-// Creamos la tabla de Type
+// Creo la tabla Type con sus propiedades
 module.exports = (sequelize) => {
-  // Tabla de Type
   sequelize.define(
     "type",
     {

@@ -5,6 +5,7 @@ import { getPokemonSearch } from "../../redux/actions";
 
 import "./Pokemon.css";
 
+/* Componente Pokemon (card) */
 const Pokemon = ({ pokemon }) => {
   const dispatch = useDispatch();
 
@@ -16,7 +17,7 @@ const Pokemon = ({ pokemon }) => {
           <div className="types">Types:</div>
           <div className="poke-types-conteiner">
             {pokemon.types.map((type) => (
-              <p className="poke-types"> {type.name} </p>
+              <p className="poke-types"> {type.nombre} </p>
             ))}
           </div>
         </div>

@@ -1,0 +1,106 @@
+.formm {
+  background: rgb(255, 27, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 27, 0, 1) 0%,
+    rgba(255, 100, 0, 1) 100%
+  );
+  width: 400px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+.form-top {
+  background-color: #ff711e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.form-top input {
+  border: none;
+  background-color: #e6e6e6;
+  width: 175px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.form-top label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.label-input {
+  margin-top: 5px;
+}
+
+.types-selects {
+  margin-top: 15px;
+  display: flex;
+}
+
+.selects {
+  background-color: #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 10px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.select {
+  border: none;
+  border-radius: 3px;
+}
+
+.create {
+  margin-top: 15px;
+  width: 175px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(204, 82, 0);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.create:hover {
+  background-color: #000;
+}
+
+.principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #cfcfcf;
+  height: 535px;
+}
+
+.img-select-conteiner {
+  background-color: rgba(255, 100, 0, 1);
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+.image {
+    width: 300px;
+    height: 300px;
+}
+.title-img {
+    margin-left: 5px;
+    margin-bottom: 3px;
+    font-weight: bold;
+    font-size: 15px;
+}

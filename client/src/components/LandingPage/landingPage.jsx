@@ -15,10 +15,6 @@ const LandingPage = () => {
             {" "}
             <div className="der">Create Pokémon</div>
           </Link>
-          <Link to="/aboutme">
-            {" "}
-            <div className="der">About Me</div>
-          </Link>
         </div>
       </div>
       <div className="contenedor">

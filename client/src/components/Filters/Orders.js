@@ -5,6 +5,7 @@ export const ATTACK_DESC = "ATTACK_DESC";
 export const ALL = "ALL";
 export const NO_ORDER = "NO_ORDER";
 
+/* Ordenar pokemons por Az/Za o por Attack */
 export const pokemonOrder = (by) => (dispatch, getState) => {
   const filtered = getState().filteredPokemon.slice();
   const OrderBy = getState().filtered_by;
@@ -14,9 +15,7 @@ export const pokemonOrder = (by) => (dispatch, getState) => {
     case "A-Z":
       if (OrderBy === "All") {
         const orderedPokemon = pokemon.sort((a, b) => {
-          if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-          if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
-          return 0;
+          return a.name.localeCompare(b.name);
         });
         dispatch({
           type: POKEMONS_ASC,
@@ -27,9 +26,7 @@ export const pokemonOrder = (by) => (dispatch, getState) => {
         });
       } else {
         const orderedPokemon = filtered.sort((a, b) => {
-          if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-          if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
-          return 0;
+          return a.name.localeCompare(b.name);
         });
         dispatch({
           type: POKEMONS_ASC,
@@ -43,11 +40,11 @@ export const pokemonOrder = (by) => (dispatch, getState) => {
 
     case "Z-A":
       if (OrderBy === "All") {
-        const orderedPokemon = pokemon.sort((a, b) => {
-          if (a.name.toLowerCase() < b.name.toLowerCase()) return 1;
-          if (a.name.toLowerCase() > b.name.toLowerCase()) return -1;
-          return 0;
-        });
+        const orderedPokemon = pokemon
+          .sort((a, b) => {
+            return a.name.localeCompare(b.name);
+          })
+          .reverse();
         dispatch({
           type: POKEMONS_DESC,
           payload: {
@@ -56,11 +53,11 @@ export const pokemonOrder = (by) => (dispatch, getState) => {
           },
         });
       } else {
-        const orderedPokemon = filtered.sort((a, b) => {
-          if (a.name.toLowerCase() < b.name.toLowerCase()) return 1;
-          if (a.name.toLowerCase() > b.name.toLowerCase()) return -1;
-          return 0;
-        });
+        const orderedPokemon = filtered
+          .sort((a, b) => {
+            return a.name.localeCompare(b.name);
+          })
+          .reverse();
         dispatch({
           type: POKEMONS_DESC,
           payload: {
@@ -73,7 +70,7 @@ export const pokemonOrder = (by) => (dispatch, getState) => {
 
     case "Attack Asc":
       if (OrderBy === "All") {
-        const orderedPokemon = pokemon.sort((a, b) => b.ataque - a.ataque);
+        const orderedPokemon = pokemon.sort((a, b) => b.attack - a.attack);
         dispatch({
           type: ATTACK_ASC,
           payload: {
@@ -82,7 +79,7 @@ export const pokemonOrder = (by) => (dispatch, getState) => {
           },
         });
       } else {
-        const orderedPokemon = filtered.sort((a, b) => b.ataque - a.ataque);
+        const orderedPokemon = filtered.sort((a, b) => b.attack - a.attack);
         dispatch({
           type: ATTACK_ASC,
           payload: {
@@ -95,7 +92,7 @@ export const pokemonOrder = (by) => (dispatch, getState) => {
 
     case "Attack Des":
       if (OrderBy === "All") {
-        const orderedPokemon = pokemon.sort((a, b) => a.ataque - b.ataque);
+        const orderedPokemon = pokemon.sort((a, b) => a.attack - b.attack);
         dispatch({
           type: ATTACK_DESC,
           payload: {
@@ -104,7 +101,7 @@ export const pokemonOrder = (by) => (dispatch, getState) => {
           },
         });
       } else {
-        const orderedPokemon = filtered.sort((a, b) => a.ataque - b.ataque);
+        const orderedPokemon = filtered.sort((a, b) => a.attack - b.attack);
         dispatch({
           type: ATTACK_DESC,
           payload: {
@@ -127,4 +124,3 @@ export const pokemonOrder = (by) => (dispatch, getState) => {
       return pokemon;
   }
 };
-

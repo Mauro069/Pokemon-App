@@ -15,17 +15,24 @@ export const SearchBar = () => {
       <h2>Search a Pokémon</h2>
       <div>
         <input
+          className="buscador"
           type="text"
           value={pokeName}
-          autoComplete='off'
+          autoComplete="off"
           onChange={(event) => {
             setPokeName(event.target.value);
           }}
         ></input>
-        <Link to = {`/home/${pokeName}`}>
-        <button onClick = {() => {
-            dispatch(getPokemonSearch(pokeName.toLowerCase()))
-        }}> Search </button>
+        <Link to={`/home/${pokeName}`}>
+          <button
+            className="btn-search"
+            onClick={() => {
+              dispatch(getPokemonSearch(pokeName));
+            }}
+          >
+            {" "}
+            Search{" "}
+          </button>
         </Link>
       </div>
       <div>

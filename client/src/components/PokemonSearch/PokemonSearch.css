@@ -82,13 +82,13 @@
 }
 .poke-name-id {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .poke-search-id {
   color: #cfcfcf;
-  font-size: 35px;
+  font-size: 15px;
   font-weight: bold;
-  margin-left: 10px;
 }
 /* TYPES */
 .typess {
@@ -199,7 +199,7 @@
   margin-right: 120px;
 }
 
-.conteiner{
+.conteiner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -208,7 +208,7 @@
   justify-content: space-around;
 }
 
-.conteiner-2{
+.conteiner-2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -216,5 +216,41 @@
   width: 150px;
   justify-content: space-around;
   margin-right: 100px;
+}
+
+/* NOT FOUND */
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1366;
+  height: 625px;
+  background: rgb(255, 27, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 27, 0, 1) 0%,
+    rgba(255, 100, 0, 1) 100%
+  );
+  justify-content: space-around;
+
+}
+.not-found {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+}
+
+.btn-back {
+  margin-top: 10px;
+  background-color: #e6e6e6;
+  border: none;
+  width: 150px;
+  height: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-back:hover {
+  background-color: #1b0101;
+  color: #e6e6e6;
 }
 

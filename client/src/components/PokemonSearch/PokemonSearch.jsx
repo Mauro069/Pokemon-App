@@ -30,43 +30,43 @@ const PokemonByName = () => {
             <div className="poke-search-info-conteiner">
               <div className="data-text">
                 <div className="poke-name-id">
-                  <div className="poke-search-name">{buscador[0].name}</div>
                   <div className="poke-search-id">#{buscador[0].id}</div>
+                  <div className="poke-search-name">{buscador[0].name}</div>
                 </div>
                 <div>
                   <p className="typess">Types: </p>
                   <div className="types_search">
                     {buscador[0].types.map((type) => (
-                      <div className="types_search-name">{type.name}</div>
+                      <div className="types_search-name">{type.nombre}</div>
                     ))}
                   </div>
                 </div>
 
                 <div className="data">
                   <div className="Weight-Speed">
-                    <div className='conteiner'>
+                    <div className="conteiner">
                       {" "}
                       <div className="hp-conteiner">
-                        <p className="hp">HP:</p> {buscador[0].vida}
+                        <p className="hp">HP:</p> {buscador[0].hp}
                       </div>{" "}
                       <div className="Height-conteiner">
-                        <p className="Height">Height:</p> {buscador[0].altura}
+                        <p className="Height">Height:</p> {buscador[0].height}
                       </div>{" "}
                       <div className="Weight-conteiner">
-                        <p className="Weight">Weight:</p> {buscador[0].peso}
+                        <p className="Weight">Weight:</p> {buscador[0].weight}
                       </div>
                     </div>
-                    <div className='conteiner-2'>
+                    <div className="conteiner-2">
                       {" "}
                       <div className="Attack-conteiner">
-                        <p className="Attack">Attack:</p> {buscador[0].ataque}
+                        <p className="Attack">Attack:</p> {buscador[0].attack}
                       </div>{" "}
                       <div className="Defense-conteiner">
                         <p className="Defense">Defense:</p>{" "}
-                        {buscador[0].defensa}
+                        {buscador[0].defense}
                       </div>{" "}
                       <div className="Speed-conteiner">
-                        <p className="Speed">Speed:</p> {buscador[0].velocidad}
+                        <p className="Speed">Speed:</p> {buscador[0].speed}
                       </div>
                     </div>
                   </div>
@@ -84,13 +84,19 @@ const PokemonByName = () => {
         </div>
       )}
       {error && (
-        <div>
-          <div className="btn-conteiner">
-            <Link to="/home">
-              <button className="btn"> Back to home </button>
-            </Link>
-          </div>{" "}
-          Pokemon not Found{" "}
+        <div className="error">
+          <div className="btn-f">
+            <h1 className="poke-f">Pokémon Not Found</h1>
+            <div className="btn-conteiner">
+              <Link to="/home">
+                <button className="btn-back"> Back to home </button>
+              </Link>
+            </div>
+          </div>
+          <img
+            className="not-found"
+            src="https://media1.tenor.com/images/0436bfc9861b4b57ffffda82d3adad6e/tenor.gif?itemid=15550145"
+          />
         </div>
       )}
     </div>

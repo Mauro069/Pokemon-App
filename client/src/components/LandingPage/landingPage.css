@@ -14,10 +14,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  width: 300px;
+  margin-right: 25px;
 }
 .izq {
-  width: 150px;
   height: 40px;
   display: flex;
   align-items: center;

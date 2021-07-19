@@ -1,12 +1,13 @@
 import React from "react";
 import Pokemon from "./Pokemon";
 
-import './Pokemons.css'
+import "./Pokemons.css";
 
+/* Componente Pokemons (cards) */
 const Pokemons = (props) => {
   const { pokemons } = props;
   return (
-    <div className = 'pokemons'>
+    <div className="pokemons">
       {pokemons.map((pokemon, idx) => (
         <Pokemon key={idx} pokemon={pokemon} index={idx} />
       ))}

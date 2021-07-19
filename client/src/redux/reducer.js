@@ -1,7 +1,7 @@
+/* Estado Inicial */
 const initialState = {
   pokemons: [],
   types: [],
-  pokemon_created: [],
   filteredPokemon: [],
   filtered_by: "All",
   ordered_by: "All",
@@ -10,8 +10,19 @@ const initialState = {
   error: "",
 };
 
+/* Reducer */
 const pokemonReducer = (state = initialState, action) => {
   switch (action.type) {
+    case "GET_POKEMON":
+      return {
+        ...state,
+        pokemons: action.payload,
+      };
+    case "GET_TYPES":
+      return {
+        ...state,
+        types: action.payload,
+      };
     case "POKE_REQUEST":
       return {
         ...state,
@@ -36,16 +47,7 @@ const pokemonReducer = (state = initialState, action) => {
         ...state,
         pokemon_created: action.payload,
       };
-    case "GET_POKEMON":
-      return {
-        ...state,
-        pokemons: action.payload,
-      };
-    case "GET_TYPES":
-      return {
-        ...state,
-        types: action.payload,
-      };
+
     case "POKEMONS_ASC":
       return {
         ...state,

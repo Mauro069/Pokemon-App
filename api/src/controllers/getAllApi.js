@@ -1,41 +1,33 @@
 const axios = require("axios");
 
+/* Traigo los pokemons de la api */
 const getApi = async () => {
-  /* Pido los primeros 20 pokemons */
   let pokemonUrl = await axios.get("https://pokeapi.co/api/v2/pokemon");
-  /* Pido los 20 pokemons que siguen */
   let pokemonUrlNext = await axios.get(pokemonUrl.data.next);
   let pokemonUrlNextNext = await axios.get(pokemonUrlNext.data.next);
-  /* Concateno los primeros 20 pokemons con los 20 que siguen */
   let resultPokemons = pokemonUrl.data.results.concat(
     pokemonUrlNext.data.results
   );
   let resultPokemon = resultPokemons.concat(pokemonUrlNextNext.data.results);
 
-  /* Accedo a las propiedades de cada pokemon */
+  /* Accedo a las propiedades de los pokemons y hago una subrequest a cada pokemon */
   for (let el of resultPokemon) {
-    /* Hago una subrequest a cada pokemon */
     let pokemonInfo = await axios.get(el.url);
     pokemonInfo = pokemonInfo.data;
     el.id = pokemonInfo.id;
-    el.vida = pokemonInfo.stats[0].base_stat;
-    el.ataque = pokemonInfo.stats[1].base_stat;
-    el.defensa = pokemonInfo.stats[2].base_stat;
-    el.velocidad = pokemonInfo.stats[5].base_stat;
-    el.altura = pokemonInfo.height;
-    el.peso = pokemonInfo.weight;
-    /* Obtengo todos los types de cada pokemon */
+    el.hp = pokemonInfo.stats[0].base_stat;
+    el.attack = pokemonInfo.stats[1].base_stat;
+    el.defense = pokemonInfo.stats[2].base_stat;
+    el.speed = pokemonInfo.stats[5].base_stat;
+    el.height = pokemonInfo.height;
+    el.weight = pokemonInfo.weight;
     el.types = pokemonInfo.types.map((el) => {
-      return { name: el.type.name };
+      return { nombre: el.type.name };
     });
     el.img = pokemonInfo.sprites.other.dream_world.front_default;
-    /* Elimino la url asi puedo seguir con la siguiente */
-    delete el.url;
   }
-  /* Devuelvo la info que necesito de los 40 pokemons */
   return resultPokemon;
 };
 
 const getAllApi = getApi();
-
 module.exports = getAllApi;

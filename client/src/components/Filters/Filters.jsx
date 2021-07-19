@@ -11,7 +11,7 @@ const Filters = ({
   pokemonByType,
   pokemonByOrigin,
 }) => {
-  const type = types.data;
+  const Types = types.data;
 
   /* Orders */
   const handleOrder = (e) => {
@@ -44,11 +44,13 @@ const Filters = ({
     <div>
       {/* ORDERS */}
       <select name="Filter" onChange={handleOrder}>
-        <option value="All">All</option>
-        <option value="A-Z">A-Z</option>
-        <option value="Z-A">Z-A</option>
-        <option value="Attack Asc">More Attack</option>
-        <option value="Attack Des">Less Attack</option>
+        <optgroup label="Order by">
+          <option value="All">All</option>
+          <option value="A-Z">A-Z</option>
+          <option value="Z-A">Z-A</option>
+          <option value="Attack Asc">More Attack</option>
+          <option value="Attack Des">Less Attack</option>
+        </optgroup>
       </select>
 
       {/* FILTER BY ORIGIN */}
@@ -70,9 +72,9 @@ const Filters = ({
       <select onChange={FilterByType}>
         <optgroup label="By type">
           <option default>All</option>
-          {type &&
-            type.map((type, i) => (
-              <option key={i} value={type.nombre}>
+          {Types &&
+            Types.map((type, i) => (
+              <option key={i} className="option-types" value={type.nombre}>
                 {type.nombre}
               </option>
             ))}
