@@ -50,6 +50,7 @@ const Filters = ({
           <option value="Z-A">Z-A</option>
           <option value="Attack Asc">More Attack</option>
           <option value="Attack Des">Less Attack</option>
+          <option value="Speed Asc">Speed Asc</option>
         </optgroup>
       </select>
 

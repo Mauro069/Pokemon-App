@@ -38,6 +38,9 @@ module.exports = (sequelize) => {
       img: {
         type: DataTypes.STRING,
       },
+      create: {
+        type: DataTypes.BOOLEAN
+      }
     },
     {
       timestamps: false,

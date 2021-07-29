@@ -1,15 +1,23 @@
+import { useSelector } from "react";
+
 export const POKEMONS_ASC = "POKEMONS_ASC";
 export const POKEMONS_DESC = "POKEMONS_DESC";
 export const ATTACK_ASC = "ATTACK_ASC";
 export const ATTACK_DESC = "ATTACK_DESC";
 export const ALL = "ALL";
 export const NO_ORDER = "NO_ORDER";
+export const SPEED_ASC = "SPEED_ASC";
 
 /* Ordenar pokemons por Az/Za o por Attack */
 export const pokemonOrder = (by) => (dispatch, getState) => {
-  const filtered = getState().filteredPokemon.slice();
-  const OrderBy = getState().filtered_by;
-  const pokemon = getState().pokemons.slice();
+   const filtered = getState().filteredPokemon?.slice();
+  // const filtereds = useSelector((state) => state.filteredPokemon);
+  // const filtered = filtereds?.slice()
+   const OrderBy = getState().filtered_by;
+  // const OrderBy = useSelector((state) => state.filtered_by);
+   const pokemon = getState().pokemons.slice();
+  // const pokemone = useSelector((state) => state.pokemons);
+  // const pokemon = pokemone.slice()
 
   switch (by) {
     case "A-Z":
@@ -119,6 +127,27 @@ export const pokemonOrder = (by) => (dispatch, getState) => {
           name: by,
         },
       });
+      break;
+    case "Speed Asc":
+      if (OrderBy === "All") {
+        const orderedPokemon = pokemon.sort((a, b) => b.speed - a.speed);
+        dispatch({
+          type: ATTACK_ASC,
+          payload: {
+            orderedPokemon,
+            name: by,
+          },
+        });
+      } else {
+        const orderedPokemon = filtered.sort((a, b) => b.speed - a.speed);
+        dispatch({
+          type: ATTACK_ASC,
+          payload: {
+            orderedPokemon,
+            name: by,
+          },
+        });
+      }
       break;
     default:
       return pokemon;

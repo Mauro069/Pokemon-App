@@ -75,13 +75,6 @@ export const Form = ({
               </div>
             </div>
           </div>
-          <div className="">
-            <p className="title-img"> Image: </p>
-            <div className="img-select-conteiner">
-              {" "}
-              <img className="image" src={img} />{" "}
-            </div>
-          </div>
         </div>
 
         {Alert.create ? <div>{alert("Pokémon created")}</div> : null}

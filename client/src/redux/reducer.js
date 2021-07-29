@@ -66,6 +66,12 @@ const pokemonReducer = (state = initialState, action) => {
         filteredPokemon: action.payload.orderedPokemon,
         ordered_by: action.payload.name,
       };
+      case "ATTACK_ASC":
+        return {
+          ...state,
+          filteredPokemon: action.payload.orderedPokemon,
+          ordered_by: action.payload.name,
+        };  
     case "ATTACK_DESC":
       return {
         ...state,
